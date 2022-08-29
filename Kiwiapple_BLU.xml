@@ -1,0 +1,721 @@
+<ashitacast>
+	<settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<hpupdate>true</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: FALSE -->
+		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: FALSE -->
+	</settings>
+
+<init>
+        <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
+        <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
+        <!-- <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
+		<if p_subjob="THF"><setvar name="macropage" value="2" /></if>
+        <if p_subjob="RDM"><setvar name="macropage" value="4" /></if>
+        <if p_subjob="PLD"><setvar name="macropage" value="5" /></if> -->
+
+        
+        
+        <!-- <if p_mainjob="BLU"><setvar name="macrobook" value="4" /><setvar name="BLU" value="4" /></if>
+        <command delay="1500">/macro book $macrobook</command>
+        <command delay="3000">/macro set $macropage</command>
+        <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command> -->
+ 
+        <!-- This will change your Lockstyle set if desired -->
+        <!--<command delay='6000'>/lockstyleset $lockstyleset</command> -->
+        <!-- <command delay="4000">/gl blink</command> -->
+        <!-- Only use this line if you have the plugin "Gearlock" installed -->
+    </init>
+
+<!--
+<set template>
+		<head></head>
+		<neck></neck>
+		<ear1></ear1>
+		<ear2></ear2>
+		<body></body>
+		<hands></hands>
+		<ring1></ring1>
+		<ring2></ring2>
+		<back></back>
+		<waist></waist>
+		<legs></legs>
+		<feet></feet>
+</set> -->
+
+	
+	<sets>
+		<set name="dualwield">
+			<main>Wightslayer</main>
+			<sub>Ifrit's Blade</sub>
+		</set>
+		<set name="onehand">
+			<main>Wightslayer</main>
+			<sub>Genbu's shield</sub>
+		</set>
+
+<!-- Engaged TP Set. Standard melee set. -->
+		<set name="TP">
+			<head>Walahra Turban</head>
+			<neck>Chivalrous Chain</neck>
+			<ear1>Suppanomimi</ear1>
+			<ear2>Brutal Earring</ear2>
+			<body>Scorpion harness</body>
+			<hands>Dusk gloves</hands>
+			<ring1>Toreador's Ring</ring1>
+			<ring2>Rajas ring</ring2>
+			<back>Amemet Mantle +1</back>
+			<waist>Potent Belt</waist>
+			<legs>Homam cosciales</legs>
+			<feet>Dusk ledelsens</feet>
+			<ammo>Tiphia sting</ammo>
+		</set>
+
+		<set name="haste" baseset="TP">
+			<head>Walahra Turban</head>
+			<body>Magus Jubbah</body>
+			<hands>Dusk gloves</hands>
+			<feet>Dusk ledelsens</feet>
+			<legs>Homam cosciales</legs>
+		</set>
+
+<!-- Idle set. Movement speed, Refresh, Regen, Dt-%, etc -->
+		<set name="Idle" baseset="TP">
+			<feet>Mirage charuqs</feet>
+			<hands>Mirage bazubands</hands>
+			<ammo>Attar Sachet</ammo> 
+		</set>
+
+		<set name="City" baseset="Idle">
+			<body>Magus Jubbah</body>
+			<head>Magus keffiyeh</head>
+			<legs>Magus shalwar</legs>
+			<feet>Mirage charuqs</feet>
+			<hands>Mirage bazubands</hands>
+		</set>
+
+		<set name="savagebld" baseset="TP"> <!--Str/Mnd set -->
+			<head>Walkure mask</head>
+			<body>Magus Jubbah</body>
+			<hands>Devotee's mitts</hands>
+			<feet>Dusk ledelsens</feet> 
+			<ammo>Attar Sachet</ammo>
+           	      <ring1>Sapphire ring</ring1>
+      	      <ring2>Sapphire ring</ring2>
+			<legs>Republic subligar</legs>
+        	</set>
+
+        	<set name="str">
+			<head>Wivre mask</head>
+			<body>Magus Jubbah</body>
+			<hands>Pallas's bracelets</hands>
+			<legs>Republic subligar</legs>
+			<feet>Mirage charuqs</feet> 
+			<neck>Chivalrous Chain</neck>
+			<waist>Swordbelt</waist>
+			<ear1>Suppanomimi</ear1>
+			<ear2>Minuet Earring</ear2> 
+			<ring1>Rajas ring</ring1>
+			<ring2>Ruby Ring</ring2>
+			<back>Amemet Mantle +1</back>
+			<ammo>Attar Sachet</ammo>			
+        	</set>
+
+        	<set name="physatk" baseset="str">
+			
+        	</set>
+        	<set name="physacc" baseset="TP">
+			<head>Homam zucchetto</head>
+			<body>Scorpion harness</body>
+			<hands>Pallas's bracelets</hands>
+			<feet>Dusk ledelsens</feet> 
+        	</set>
+
+        <set name="dex" baseset="TP">
+		<head>Wivre mask</head>
+		<neck>Chivalrous Chain</neck>
+		<ear1>Minuet earring</ear1>
+		<ear2>Spike earring</ear2>
+		<body>Magus jubbah</body>
+		<hands>Mirage bazubands</hands>
+		<ring1>Rajas ring</ring1>
+		<ring2>Toreador's Ring</ring2>
+		<back>Amemet mantle +1</back>
+		<waist>Potent belt</waist>
+		<legs>Magna F chausses</legs>
+		<feet>Mirage charuqs</feet>
+		<ammo>Attar Sachet</ammo>
+        </set>
+        <set name="cannonball" baseset="str">
+		<head>Wivre mask</head>
+		<body>Magus Jubbah</body>
+		<ring1>Rajas ring</ring1>
+		<ring2>Ruby ring</ring2>
+		<ear1>Suppanomimi</ear1>
+		<ear2>Minuet Earring</ear2>
+		<waist>Sword belt</waist>
+		<legs>Magus shalwar</legs>
+		<feet>Dusk ledelsens</feet>
+		<hands>Pallas's bracelets</hands>
+		<back>Amemet Mantle +1</back>
+		<ammo>Bibiki seashell</ammo>
+        </set>
+
+		<set name="pdt">
+		</set>
+
+
+<!-- Ideal Int set :
+        <set name="int">
+            <head>Magus Keffiyeh +1</head>
+            <body>Magus Jubbah +1</body>
+            <legs>Mahatma Slops</legs> ~$300k
+            <neck>Prudence Torque</neck>
+            <ear1>Morion earring +1</ear1> ~$350k
+            <ear2>Morion earring +1</ear2>
+            <ring1>Snow Ring</ring1> ~$220k
+            <ring2>Snow Ring</ring2>
+		<hands>Mahatma Cuffs HQ Craft
+		<feet>Denali Gamashes Nyzul fl20
+	  <set name="macc">
+		<head>Nashira Turban 
+		
+        </set> -->
+
+        <set name="int"> <!-- Needs some serious work -->
+		<head>Magus keffiyeh</head>
+		<body>Magus Jubbah</body>
+		<ring1>Diamond ring</ring1>
+		<ring2>Diamond ring</ring2>
+		<ear1>Morion earring</ear1>
+		<ear2>Morion earring</ear2>
+            <neck>Philomath Stole</neck>
+		<waist>Penitent's Rope</waist>
+		<legs>Errant slops</legs>
+		<feet>Mirage charuqs</feet>
+		<hands>Errant cuffs</hands>
+		<back>Rainbow cape</back>
+		<ammo>Morion tathlum</ammo>
+        </set>
+		<set name="macc" baseset="int">
+			<head>Homam zucchetto</head>
+		</set>
+		<set name="matk" baseset="int">
+		
+		</set>
+
+        <set name="mnd"> <!-- aka Healing Set, best I got -->
+		<head>Magus keffiyeh</head>
+		<neck>Justice badge</neck>
+		<body>Magus Jubbah</body>
+		<hands>Mirage bazubands</hands>
+            <ring1>Sapphire ring</ring1>
+            <ring2>Sapphire ring</ring2>
+		<legs>Errant slops</legs>
+		<back>Rainbow cape</back>
+		<waist>Oracle's belt</waist>
+		<feet>Errant pigaches</feet>
+		<ammo>Bibiki seashell</ammo>
+        </set>
+
+		<!-- Some upgrade ideas
+		<set name="mnd">
+			<head>Magus Keffiyeh +1</head>
+			<body>Magus Jubbah +1</body>
+			<legs>Mahatma Slops</legs> ~$300k
+			<feet>Mahatma Pigaches</feet> ~$270k
+			<neck>Promise Badge</neck>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1>Aqua Ring</ring1>
+			<ring2>Aqua Ring</ring2>
+		</set>   -->
+
+        <!-- CHR Suggested set.
+        <set name="chr">
+            <head>Entrancing Ribbon</head>
+            <body>Magus Jubbah +1</body>
+            <hands>Errant Cuffs</hands>
+            <legs>Mahatma Slops</legs>
+            <feet>Savage Gaiters</feet>
+            <neck>Flower Necklace</neck>
+            <waist>Corsette +1</waist>
+            <ear1>Moldavite Earring</ear1>
+            <ear2>Novio Earring</ear2>
+            <ring1>Angel's Ring</ring1>
+            <ring2>Angel's Ring</ring2>
+            <back>Jester's Cape +1</back>
+        </set>  -->
+
+        <set name="chr">
+		<head></head>
+		<neck></neck>
+		<ear1></ear1>
+		<ear2></ear2>
+		<body></body>
+		<hands></hands>
+		<ring1></ring1>
+		<ring2></ring2>
+		<back>Rainbow cape</back>
+		<waist></waist>
+		<legs>Errant slops</legs>
+		<feet></feet>
+        </set>
+
+<!-- Resting Set, need more HMP -->
+		<set name="Resting">
+			
+		</set>
+
+<!-- Ideal resting set :
+        <set name="Resting">
+		<main></main>
+            <body></body>
+            <hands>Vagabond's gloves</hands>
+            <legs></legs>
+            <feet></feet>
+            <neck>Grandiose chain</neck>
+            <waist></waist>
+            <ear1></ear1>
+            <ear2>g</ear2>
+            <ring1></ring1>
+            <ring2></ring2>
+            <back></back>
+        </set> -->
+
+		<set name="Fish">
+			<body>Angler's tunica</body>
+			<hands>Fisherman's gloves</hands>
+			<waist>Fisherman's belt</waist>
+			<legs>Fisherman's hose</legs>
+			<feet>Fisherman's boots</feet>
+			<rring>Pelican ring</rring>
+			<range>Composite fishing rod</range>
+			<ammo>Sinking minnow</ammo>
+		</set>
+		<set name="lumber">
+			<body>Field tunica</body>
+			<hands>Field gloves</hands>
+			<legs>Field hose</legs>
+			<feet>Field boots</feet>
+		</set>
+
+		<set name="40">
+
+		</set>
+
+	<set name="base">
+            <sub>Bugard strap +1</sub>
+            <ammo>Morion Tathlum</ammo>
+        </set>
+
+        <set name="firestaff" baseset="base">
+            <main>Fire Staff</main>
+        </set>
+        <set name="earthstaff" baseset="base">
+            <main>Earth Staff</main>
+        </set>
+        <set name="waterstaff" baseset="base">
+            <main>Water Staff</main>
+        </set>
+        <set name="windstaff" baseset="base">
+            <main>Wind Staff</main>
+        </set>
+        <set name="icestaff" baseset="base">
+            <main>Aquilo's Staff</main>
+        </set>
+        <set name="thunderstaff" baseset="base">
+            <main>Thunder Staff</main>
+        </set>
+        <set name="lightstaff" baseset="base">
+            <main>Apollo's staff</main>
+        </set>
+        <set name="darkstaff" baseset="base">
+            <main>Dark Staff</main>
+        </set>
+		
+					
+	<set name="whm">
+		<main>Apollo's staff</main>
+		<head>Magus keffiyeh</head>
+		<neck>Justice badge</neck>
+		<body>Magus Jubbah</body>
+		<hands>Mirage bazubands</hands>
+            <ring1>Sapphire ring</ring1>
+            <ring2>Sapphire ring</ring2>
+		<legs>Errant slops</legs>
+		<back>Rainbow cape</back>
+		<waist>Oracle's belt</waist>
+		<feet>Errant pigaches</feet>
+		<ammo>Bibiki seashell</ammo>
+	</set>
+
+        <include>
+        </include>
+
+	
+	
+    </sets>
+
+
+
+
+	<!-- Variables declared for toggles -->
+	<variables>
+	  <var name="Fsh">0</var>
+	  <var name="weaponset">onehand</var>
+        <var name="usestaff">0</var>
+        <var name="speed">0</var>
+        <var name="pdt">Off</var>
+	  <var name="whm">0</var>
+ 
+        <var name="BlueMagicStr">Sprout Smack|Wild Oats|Bludgeon|Screwdriver|Pinecone Bomb|Uppercut|Jet Stream|Death Scissors|
+        Dimensional Death|Mandibular Bite|Vertical Cleave|Ram Charge|Hydro Shot|Spinal Cleave|Cannonball</var>
+        <var name="BlueMagicDex">Claw Cyclone|Smite of Rage|Terror Touch|Sickle Slash|Frenetic Rip|Hysteric Barrage|Disseverment</var>
+        <var name="BlueMagicStun">Head Butt|Frypan|Tail Slap</var>
+        <var name="BlueMagic_fire">Bomb Toss|Firespit</var>
+        <var name="BlueMagic_wind">Mysterious Light|Chaotic Eye|Feather Tickle|Voracious Trunk</var>
+        <var name="BlueMagic_earth">Sandspin</var>
+        <var name="BlueMagic_ice">Blastbomb|Ice Break</var>
+        <var name="BlueMagic_water">Cursed Sphere|Maelstrom</var>
+        <var name="BlueMagic_thunder">Blitzstrahl|Temporal Shift|Mind Blast</var>
+        <var name="BlueMagic_dark">Digest|Death Ray|MP Drainkiss|Jettatura|Eyes On Me</var>
+        <var name="BlueMagic_light">Light of Penance|1000 Needles|Magic Hammer</var>
+        <var name="BlueMagicHeal">Pollen|Healing Breeze|Wild Carrot|Magic Fruit|Exuviation</var>
+        <var name="BlueMagicBreath">Poison Breath|Magnetite Cloud|Hecatomb Wave|Radiant Breath|
+        Flying Hip Press|Bad Breath|Frost Breath|Heat Breath</var>
+        <var name="BlueMagicDebuff">Sound Blast|Lowing|Stinking Gas|Frightful Roar|
+        Filamented Hold|Cold Wave|Infrasonics|Awful Eye|Sandspray|Enervation|Actinic Burst</var>
+        <var name="BlueMagicBuff">Cocoon|Metallic Body|Refueling|Feather Barrier|Zephyr Mantle|
+        Warm-Up|Memento Mori|Diamondhide|Amplification|Saline Coat|Reactor Cool|Plasma Charge</var>
+        <var name="BlueMagicSleep">Sheep Song|Soporific|Yawn</var>
+ 
+        <var name="fireObi">Karin Obi</var>
+        <var name="iceObi">Hyorin Obi</var>
+        <var name="thunderObi">Rairin Obi</var>
+        <var name="lightObi">Korin Obi</var>
+        <var name="darkObi">Anrin Obi</var>
+	</variables>
+	
+	<!-- Create input commands to toggle situational sets -->
+	<inputcommands>
+		<cmd input="/cocoon">
+			<equip set="cannonball" />
+				<gearlock length="90" />
+				<addtochat color="50">Cocoon Set for 90 seconds!</addtochat>
+		</cmd>
+			<!-- Enable 40 lock gear -->
+		<cmd input="/fsh">
+			<if advanced="$Fsh=0">
+				<setvar name="Fsh" value="1" />
+				<addtochat color="36">Fish set on!</addtochat>
+			</if>
+			<else>
+				<setvar name="fsh" value="0" />
+				<addtochat color="36">Fish set Off!</addtochat>
+			</else>
+		</cmd>	
+		<cmd input="/pdt">
+            <if advanced="$pdt=Off">
+                <setvar name="pdt" value="On" />
+                <addtochat color="36">PDT set on!</addtochat>
+            </if>
+            <else>
+                <setvar name="pdt" value="Off" />
+                <addtochat color="36">PDT set off!</addtochat>
+
+            </else>
+	        </cmd>
+		<cmd input="/ss">
+            <if advanced="$weaponset=onehand">
+                <setvar name="weaponset" value="dualwield" />
+            </if>
+            <else>
+                <setvar name="weaponset" value="onehand" />
+            </else>
+            <command delay="1500">/gl blink</command>
+        </cmd>
+        <cmd input="/staff">
+            <if advanced="$usestaff=0">
+                <setvar name="usestaff" value="1" />
+                <addtochat color="57">Staff for debuffs ENABLED</addtochat>
+            </if>
+            <else>
+                <setvar name="usestaff" value="0" />
+                <addtochat color="57">Staff for debuffs DISABLED</addtochat>
+            </else>
+        </cmd>
+	  <cmd input="/whm">
+            <if advanced="$whm=0">
+                <setvar name="whm" value="1" />
+                <addtochat color="36">WHM Idle Set On!</addtochat>
+            </if>
+            <else>
+                <setvar name="whm" value="0" />
+                <addtochat color="36">WHM Idle Set Off!</addtochat>
+
+            </else>
+	  </cmd>
+
+        <cmd input="/sp">
+            <if advanced="$speed=0">
+                <setvar name="speed" value="1" />
+                <addtochat color="57">Crimson Cuisses ON</addtochat>
+            </if>
+            <else>
+                <setvar name="speed" value="0" />
+                <addtochat color="57">Crimson Cuisses OFF</addtochat>
+            </else>
+        </cmd>
+
+	</inputcommands>
+	
+	<!-- These are all of the various rules that decide when to equip gear. Be careful when making any changes to them! -->
+	<idlegear>
+	
+	<!-- Gear locks for usable items. Empress Band, Warp Cudgel, etc. -->
+ 		<equip set="$weaponset" />
+ 		<equip set="$pdt" />
+        	<equip set="%p_status" />
+        <if advanced="$speed=1">
+            <equip>
+                <legs>Crimson Cuisses</legs>
+            </equip>
+        </if>
+
+		<if eq_rring="Empress Band">
+			<equip lock="true">
+				<rring>Empress Band</rring>                
+			</equip>
+		</if>
+		<if eq_lring="Empress Band">
+			<equip lock="true">
+				<lring>Empress Band</lring>                
+			</equip>
+		</if>
+		<if eq_rring="Emperor Band">
+			<equip lock="true">
+				<rring>Emperor Band</rring>                
+			</equip>
+		</if>
+		<if eq_lring="Emperor Band">
+			<equip lock="true">
+				<lring>Emperor Band</lring>                
+			</equip>
+		</if>
+		<if eq_rring="Tavnazian ring">
+			<equip lock="true">
+				<rring>Tavnazian ring</rring>                
+			</equip>
+		</if>
+		<if eq_lring="Tavnazian ring">
+			<equip lock="true">
+				<lring>Tavnazian ring</lring>                
+			</equip>
+		</if>
+		<if eq_rring="Return ring">
+			<equip lock="true">
+				<rring>Return Ring"</rring>
+			</equip>
+		</if>
+		<if eq_lring="Return Ring">
+			<equip lock="true">
+				<lring>Return Ring</lring>                
+			</equip>
+		</if>
+		<if eq_rear="Tactics Pearl">
+			<equip lock="true">
+				<rear>Tactics Pearl"</rear>
+			</equip>
+		</if>
+		<if eq_lear="Tactics Pearl">
+			<equip lock="true">
+				<lear>Tactics Pearl</lear>                
+			</equip>
+		</if>
+		<if eq_rear="Reraise earring">
+			<equip lock="true">
+				<rear>Reraise earring</rear>
+			</equip>
+		</if>
+		<if eq_lear="Reraise earring">
+			<equip lock="true">
+				<lear>Reraise earring</lear>
+			</equip>
+		</if>
+		<if eq_lear="Signal Pearl">
+			<equip lock="true">
+				<lear>Signal Pearl</lear>
+			</equip>
+		</if>
+		<if eq_rear="Signal Pearl">
+			<equip lock="true">
+				<rear>Signal Pearl</rear>
+			</equip>
+		</if>
+		<if eq_back="Skulker's cape">
+			<equip lock="true">
+				<back>Skulker's cape</back>
+			</equip>
+		</if>
+		<if eq_head="Reraise hairpin">
+			<equip lock="true">
+				<head>Reraise hairpin</head>
+			</equip>
+		</if>
+		<elseif eq_main="Warp Cudgel">
+			<equip lock="true">
+				<main>Warp Cudgel</main>
+			</equip>
+		</elseif>
+		
+		<!-- Equips your resting set if you're resting -->
+		<elseif p_status="resting">
+			<equip set="Resting" />
+		</elseif>
+		
+		<!-- Equip kiting set if kiting variable is toggled on -->
+						
+		<!-- Equip TP set when engaged -->
+		<elseif p_status="engaged|idle">
+				<if advanced="$pdt=On">
+					<equip set="pdt" />
+				</if>
+				<elseif p_status="engaged">
+					<equip set="TP" />
+				</elseif>
+		</elseif>
+
+		<elseif advanced="$Fsh=1">
+			<equip set="Fish" />
+		</elseif>
+		
+
+		<!-- Equip idle set when idle in all other scenarios-->
+		<elseif advanced="$whm=1">
+				<equip set="$whm" />
+		</elseif>
+
+		<else>
+				<equip set="$Idle" />				
+           </else>
+
+<!--
+        <if e_area="|Qufim Island">
+		<equip set="Fish" />
+        </if>
+
+        <if e_area="|Lufaise Meadows">
+		<equip set="lumber" />
+        </if>
+-->
+        <if e_area="Port*|Lower Jeuno|Upper Jeuno|Ru'Lude|Whitegate|Nashmau|Bastok*|Metalworks|Windurst*|Heavens*|Kazham|Norg|Rabao|Southern San d'Oria|Northern San d'Oria|Port San d'Oria|Chateau*">
+     		<equip set="City" />
+        </if>
+    </idlegear>
+
+<preranged>
+    </preranged>
+    <midranged>
+    </midranged>
+    <premagic>
+    </premagic>
+    <midmagic>
+	<if ad_name="Cure*">
+            <equip set="mnd" />
+		<equip set="lightstaff" />
+	</if>
+        <if ad_skill="BlueMagic">
+            <if ad_name="$BlueMagicStr">
+                <if ad_name="Cannonball">
+                    <equip set="cannonball" />
+                </if>
+                <else>
+                    <equip set="str" />
+                </else>
+            </if>
+            <elseif ad_name="$BlueMagicDex">
+                <equip set="dex" />
+            </elseif>
+            <elseif ad_name="$BlueMagicStun">
+                <equip set="macc" />
+            </elseif>
+            <elseif ad_name="$BlueMagicSleep">
+                <equip set="macc" />
+                <equip set="%ad_elementstaff" />
+            </elseif>
+            <elseif ad_name="$BlueMagic_%ad_element">
+                <if ad_name="Mind Blast|Magic Hammer">
+                    <equip set="mnd" />
+                </if>
+                <elseif ad_name="Mysterious Light|Eyes On Me">
+                    <equip set="chr" />
+                </elseif>
+                <else>
+                    <equip set="matk" />
+                </else>
+                <equip set="%ad_elementstaff" />
+                <if p_mp="<254">
+                    <equip>
+                        <neck>Uggalepih Pendant</neck>
+                    </equip>
+                </if>
+                <if advanced="(%ad_element=%e_dayelement)|(%ad_element=%e_weatherelement)">
+                    <equip>
+                        <waist>$%ad_elementObi</waist>
+                    </equip>
+                </if>
+            </elseif>
+            <elseif ad_name="$BlueMagicDebuff">
+                <if ad_name="Filamented Hold">
+                    <equip set="mnd" />
+                </if>
+                <else>
+                    <equip set="int" />
+                </else>
+                <if advanced="$usestaff=1">
+                    <equip set="%ad_elementstaff" />
+                </if>
+            </elseif>
+            <elseif ad_name="$BlueMagicBreath">
+                <equip set="int">
+                    <head>Mirage Keffiyeh</head>
+                </equip>
+                <equip set="%ad_elementstaff" />
+            </elseif>
+            <elseif ad_name="$BlueMagicHeal">
+                <equip set="mnd" />
+                <equip set="lightstaff" />
+                <if advanced="(%e_dayelement=light)|(%e_weatherelement=light)">
+                    <equip>
+                        <waist>$lightObi</waist>
+                    </equip>
+                </if>
+            </elseif>
+            <elseif ad_name="$BlueMagicBuff">
+                <equip set="haste">
+                	<head>Walahra Turban</head>
+            	</equip>
+            </elseif>
+        </if>
+        <elseif ad_skill="Ninjutsu">
+            <equip set="haste" />
+        </elseif>
+    </midmagic>
+    <jobability>
+    </jobability>
+    <weaponskill>
+        <if ad_name="Savage Blade">
+            <equip set="savagebld" />
+        </if>
+        <elseif ad_name="Vorpal Blade">
+            <equip set="physacc" />
+        </elseif>
+        <elseif ad_name="Flat Blade|Circle Blade">
+            <equip set="physatk" />
+        </elseif>
+        <elseif ad_name="Red Lotus Blade">
+            <equip set="magws" />
+        </elseif>
+    </weaponskill>
+</ashitacast>
+	
