@@ -5,27 +5,6 @@
 		<autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: FALSE -->
 	</settings>
 
-<init>
-        <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
-        <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
-        <!-- <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
-		<if p_subjob="THF"><setvar name="macropage" value="2" /></if>
-        <if p_subjob="RDM"><setvar name="macropage" value="4" /></if>
-        <if p_subjob="PLD"><setvar name="macropage" value="5" /></if> -->
-
-        
-        
-        <!-- <if p_mainjob="BLU"><setvar name="macrobook" value="4" /><setvar name="BLU" value="4" /></if>
-        <command delay="1500">/macro book $macrobook</command>
-        <command delay="3000">/macro set $macropage</command>
-        <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command> -->
- 
-        <!-- This will change your Lockstyle set if desired -->
-        <!--<command delay='6000'>/lockstyleset $lockstyleset</command> -->
-        <!-- <command delay="4000">/gl blink</command> -->
-        <!-- Only use this line if you have the plugin "Gearlock" installed -->
-</init>
-
 <!--
 <set template>
 		<head></head>
@@ -160,10 +139,6 @@
 		<ammo>Bibiki seashell</ammo>
         </set>
 
-		<set name="pdt">
-		</set>
-
-
 <!-- Ideal Int set :
         <set name="int">
             <head>Magus Keffiyeh +1</head>
@@ -289,7 +264,7 @@
 			<legs>Fisherman's hose</legs>
 			<feet>Fisherman's boots</feet>
 			<rring>Pelican ring</rring>
-			<range>Composite fishing rod</range>
+			<range>Comp. fishing rod</range>
 			<ammo>Sinking minnow</ammo>
 		</set>
 		<set name="lumber">
@@ -297,10 +272,6 @@
 			<hands>Field gloves</hands>
 			<legs>Field hose</legs>
 			<feet>Field boots</feet>
-		</set>
-
-		<set name="40">
-
 		</set>
 
 	<set name="base">
@@ -332,8 +303,7 @@
         <set name="darkstaff" baseset="base">
             <main>Dark Staff</main>
         </set>
-		
-					
+				
 	<set name="whm">
 		<main>Apollo's staff</main>
 		<head>Magus keffiyeh</head>
@@ -348,14 +318,10 @@
 		<back>Rainbow cape</back>
 		<waist>Oracle's belt</waist>
 		<feet>Errant pigaches</feet>
-		<ammo>Bibiki seashell</ammo>
+            <sub>Bugard strap +1</sub>
+            <ammo>Morion Tathlum</ammo>
 	</set>
 
-        <include>
-        </include>
-
-	
-	
     </sets>
 
 
@@ -365,9 +331,6 @@
 	<variables>
 	  <var name="Fsh">0</var>
 	  <var name="weaponset">onehand</var>
-        <var name="usestaff">0</var>
-        <var name="speed">0</var>
-        <var name="pdt">Off</var>
 	  <var name="whm">0</var>
  
         <var name="BlueMagicStr">Sprout Smack|Wild Oats|Bludgeon|Screwdriver|Pinecone Bomb|Uppercut|Jet Stream|Death Scissors|
@@ -400,11 +363,7 @@
 	
 <!-- Create input commands to toggle situational sets -->
 	<inputcommands>
-		<cmd input="/cocoon">
-			<equip set="cannonball" />
-				<gearlock length="90" />
-				<addtochat color="50">Cocoon Set for 90 seconds!</addtochat>
-		</cmd>
+
 <!-- Enable Fishing gear -->
 		<cmd input="/fsh">
 			<if advanced="$Fsh=0">
@@ -412,22 +371,11 @@
 				<addtochat color="36">Fish set on!</addtochat>
 			</if>
 			<else>
-				<setvar name="fsh" value="0" />
+				<setvar name="Fsh" value="0" />
 				<addtochat color="36">Fish set Off!</addtochat>
 			</else>
 		</cmd>
-<!-- Enable PDT gear -->	
-		<cmd input="/pdt">
-            <if advanced="$pdt=Off">
-                <setvar name="pdt" value="On" />
-                <addtochat color="36">PDT set on!</addtochat>
-            </if>
-            <else>
-                <setvar name="pdt" value="Off" />
-                <addtochat color="36">PDT set off!</addtochat>
 
-            </else>
-	        </cmd>
 <!-- Enable dualwield gear -->
 		<cmd input="/ss">
             <if advanced="$weaponset=onehand">
@@ -438,17 +386,7 @@
             </else>
             <command delay="1500">/gl blink</command>
         </cmd>
-<!-- Enable Staff -->
-        <cmd input="/staff">
-            <if advanced="$usestaff=0">
-                <setvar name="usestaff" value="1" />
-                <addtochat color="57">Staff for debuffs ENABLED</addtochat>
-            </if>
-            <else>
-                <setvar name="usestaff" value="0" />
-                <addtochat color="57">Staff for debuffs DISABLED</addtochat>
-            </else>
-        </cmd>
+
 <!-- Enable sub/WHM gear -->
 	  <cmd input="/whm">
             <if advanced="$whm=0">
@@ -460,17 +398,6 @@
                 <addtochat color="36">WHM Idle Set Off!</addtochat>
             </else>
 	  </cmd>
-<!-- Enable Speed gear -->
-        <cmd input="/sp">
-            <if advanced="$speed=0">
-                <setvar name="speed" value="1" />
-                <addtochat color="57">Crimson Cuisses ON</addtochat>
-            </if>
-            <else>
-                <setvar name="speed" value="0" />
-                <addtochat color="57">Crimson Cuisses OFF</addtochat>
-            </else>
-        </cmd>
 
 	</inputcommands>
 	
@@ -479,14 +406,7 @@
 	
 <!-- Gear locks for usable items. Empress Band, Warp Cudgel, etc. -->
  		<equip set="$weaponset" />
- 		<equip set="$pdt" />
         	<equip set="%p_status" />
-
-        <if advanced="$speed=1">
-            <equip>
-                <legs>Crimson Cuisses</legs>
-            </equip>
-        </if>
 
 		<if eq_rring="Empress Band">
 			<equip lock="true">
@@ -582,13 +502,8 @@
 <!-- Equip kiting set if kiting variable is toggled on -->
 						
 <!-- Equip TP set when engaged -->
-		<elseif p_status="engaged|idle">
-				<if advanced="$pdt=On">
-					<equip set="pdt" />
-				</if>
-				<elseif p_status="engaged">
-					<equip set="TP" />
-				</elseif>
+		<elseif p_status="engaged">
+			<equip set="TP" />
 		</elseif>
 
 		<elseif advanced="$Fsh=1">
@@ -598,11 +513,11 @@
 
 <!-- Equip idle set when idle in all other scenarios-->
 		<elseif advanced="$whm=1">
-				<equip set="whm" />
+			<equip set="whm" />
 		</elseif>
 
 		<else>
-				<equip set="$Idle" />				
+			<equip set="$Idle" />				
            </else>
 
 <!--
