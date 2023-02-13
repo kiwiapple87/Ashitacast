@@ -25,7 +25,7 @@
 	<sets>
 		<set name="dualwield">
 			<main>Wightslayer</main>
-			<sub>Ifrit's Blade</sub>
+			<sub>Adaman kilij</sub>
 		</set>
 		<set name="onehand">
 			<main>Wightslayer</main>
@@ -38,117 +38,129 @@
 			<neck>Chivalrous Chain</neck>
 			<ear1>Suppanomimi</ear1>
 			<ear2>Brutal Earring</ear2>
-			<body>Scorpion harness</body>
-			<hands>Dusk gloves</hands>
+			<body>Mirage jubbah</body>
+			<hands>Homam manopolas</hands>
 			<ring1>Toreador's Ring</ring1>
 			<ring2>Rajas ring</ring2>
-			<back>Amemet Mantle +1</back>
+			<back>Mirage mantle</back>
 			<waist>Potent Belt</waist>
 			<legs>Homam cosciales</legs>
-			<feet>Dusk ledelsens</feet>
+			<feet>Homam gambieras</feet>
 			<ammo>Tiphia sting</ammo>
 		</set>
 
 		<set name="haste" baseset="TP">
 			<head>Walahra Turban</head>
 			<body>Magus Jubbah</body>
-			<hands>Dusk gloves</hands>
-			<feet>Dusk ledelsens</feet>
+			<hands>Homam manopolas</hands>
+			<waist>Quick belt</waist>
+			<feet>Homam gambieras</feet>
 			<legs>Homam cosciales</legs>
 		</set>
 
 <!-- Idle set. Movement speed, Refresh, Regen, Dt-%, etc -->
 		<set name="Idle" baseset="TP">
-			<feet>Mirage charuqs</feet>
-			<hands>Mirage bazubands</hands>
 			<ammo>Attar Sachet</ammo> 
 		</set>
 
 		<set name="City" baseset="Idle">
-			<body>Magus Jubbah</body>
-			<head>Magus keffiyeh</head>
-			<legs>Magus shalwar</legs>
+			<body>Mirage Jubbah</body>
+			<head>Mirage keffiyeh</head>
+			<legs>Mirage shalwar</legs>
 			<feet>Mirage charuqs</feet>
 			<hands>Mirage bazubands</hands>
 		</set>
 
-		<set name="savagebld" baseset="TP"> <!--Str/Mnd set -->
-			<head>Walkure mask</head>
+		<set name="savagebld" baseset="str"> <!--Str/Mnd set -->
+			<head>Magus keffiyeh</head>
 			<body>Magus Jubbah</body>
-			<hands>Devotee's mitts</hands>
-			<feet>Dusk ledelsens</feet> 
+			<hands>Mirage bazubands</hands> 
 			<ammo>Attar Sachet</ammo>
            	      <ring1>Sapphire ring</ring1>
       	      <ring2>Sapphire ring</ring2>
-			<legs>Republic subligar</legs>
+			<legs>Mirage shalwar</legs>
         	</set>
 
         	<set name="str">
-			<head>Wivre mask</head>
+			<head>Mirage keffiyeh</head>
 			<body>Magus Jubbah</body>
 			<hands>Pallas's bracelets</hands>
-			<legs>Republic subligar</legs>
-			<feet>Mirage charuqs</feet> 
+			<legs>Mirage shalwar</legs> <!-- upgrade -->
+			<feet>Heroic boots</feet> <!-- upgrade -->
 			<neck>Chivalrous Chain</neck>
-			<waist>Swordbelt</waist>
+			<waist>Potent belt</waist>
 			<ear1>Suppanomimi</ear1>
-			<ear2>Minuet Earring</ear2> 
+			<ear2>Minuet Earring</ear2> <!-- upgrade -->
 			<ring1>Rajas ring</ring1>
-			<ring2>Ruby Ring</ring2>
+			<ring2>Flame ring</ring2>
 			<back>Amemet Mantle +1</back>
 			<ammo>Attar Sachet</ammo>			
         	</set>
 
         	<set name="physatk" baseset="str">
-			
+			<head>Wivre mask</head>
+			<waist>Swordbelt</waist>
         	</set>
-        	<set name="physacc" baseset="TP">
-			<head>Homam zucchetto</head>
-			<body>Scorpion harness</body>
+        	<set name="physacc" baseset="str">
+			<head>Wivre mask</head>
+			<waist>Swordbelt</waist>
 			<hands>Pallas's bracelets</hands>
-			<feet>Dusk ledelsens</feet> 
+			<feet>Homam gambieras</feet> 
         	</set>
 
-        <set name="dex" baseset="TP">
-		<head>Wivre mask</head>
-		<neck>Chivalrous Chain</neck>
+        <set name="dex" baseset="str">
+		<head>Homam zucchetto</head>
+		<neck>Spike necklace</neck>
 		<ear1>Minuet earring</ear1>
-		<ear2>Spike earring</ear2>
+		<ear2>Harvest earring</ear2>
 		<body>Magus jubbah</body>
-		<hands>Mirage bazubands</hands>
+		<hands>Enkidu's mittens</hands>
 		<ring1>Rajas ring</ring1>
-		<ring2>Toreador's Ring</ring2>
-		<back>Amemet mantle +1</back>
+		<ring2>Toreador's ring</ring2>
+		<back>Mirage mantle</back> <!-- upgrade -->
 		<waist>Potent belt</waist>
-		<legs>Magna F chausses</legs>
-		<feet>Mirage charuqs</feet>
+		<legs>Mirage shalwar</legs> <!-- upgrade and feet-->
+		<feet>Homam gambieras</feet>
 		<ammo>Attar Sachet</ammo>
         </set>
         <set name="cannonball" baseset="str">
-		<head>Wivre mask</head>
+		<head>Mirage keffiyeh</head>
 		<body>Magus Jubbah</body>
 		<ring1>Rajas ring</ring1>
 		<ring2>Ruby ring</ring2>
 		<ear1>Suppanomimi</ear1>
 		<ear2>Minuet Earring</ear2>
-		<waist>Sword belt</waist>
+		<waist>Potent belt</waist>
 		<legs>Magus shalwar</legs>
-		<feet>Dusk ledelsens</feet>
+		<feet></feet>
 		<hands>Pallas's bracelets</hands>
 		<back>Amemet Mantle +1</back>
 		<ammo>Bibiki seashell</ammo>
         </set>
 
+<!--
+<set name="evasion">
+		<head>Wivre mask</head> Eva +10 (+1 eva +11)
+		*<neck>Evasion Torque</neck> Eva +7
+		*<ear1>Orichalcum earring</ear1> eva 5
+		<ear2></ear2>
+		<body>Scorpion harness</body> Eva +10 (+1 eva +12)
+		<hands>Mirage Bazubands</hands> Eva +5
+		*<ring1>Wivre ring</ring1> eva 2
+		<ring2></ring2>
+		*<back>Boxer's mantle</back> eva 10
+		*<waist>Scouter's rope</waist> eva +10
+		*<legs>combat Caster's slacks</legs> eva 5
+		<feet>magus charuqs</feet> eva +10
+</set> -->
+
 <!-- Ideal Int set :
         <set name="int">
             <head>Magus Keffiyeh +1</head>
             <body>Magus Jubbah +1</body>
-            <legs>Mahatma Slops</legs> ~$300k
             <neck>Prudence Torque</neck>
             <ear1>Morion earring +1</ear1> ~$350k
             <ear2>Morion earring +1</ear2>
-            <ring1>Snow Ring</ring1> ~$220k
-            <ring2>Snow Ring</ring2>
 		<hands>Mahatma Cuffs HQ Craft
 		<feet>Denali Gamashes Nyzul fl20
 	  <set name="macc">
@@ -157,37 +169,39 @@
         </set> -->
 
         <set name="int">
-		<head>Magus keffiyeh</head>
+		<head>Mirage keffiyeh</head>
 		<body>Magus Jubbah</body>
-		<ring1>Diamond ring</ring1>
-		<ring2>Diamond ring</ring2>
+		<ring1>Snow ring</ring1>
+		<ring2>Snow ring</ring2>
 		<ear1>Morion earring</ear1>
 		<ear2>Morion earring</ear2>
             <neck>Philomath Stole</neck>
-		<waist>Penitent's Rope</waist>
-		<legs>Errant slops</legs>
+		<waist>Penitent's rope</waist>
+		<legs>Mahatma slops</legs>
 		<feet>Mirage charuqs</feet>
 		<hands>Errant cuffs</hands>
 		<back>Rainbow cape</back>
 		<ammo>Morion tathlum</ammo>
         </set>
-		<set name="macc" baseset="int">
-			<head>Homam zucchetto</head>
-		</set>
-		<set name="matk" baseset="int">
-		
-		</set>
+	  <set name="macc" baseset="int">
+		<back>Mirage mantle</back>	
+	  </set>
+	<set name="matk" baseset="macc">
+		<ear1>Moldavite earring</ear1>
+	</set>
 
         <set name="mnd">
-		<head>Magus keffiyeh</head>
+		<head>Mirage keffiyeh</head>
 		<neck>Justice badge</neck>
 		<body>Magus Jubbah</body>
 		<hands>Mirage bazubands</hands>
             <ring1>Sapphire ring</ring1>
             <ring2>Sapphire ring</ring2>
-		<legs>Errant slops</legs>
+		<ear1>Geist earring</ear1>
+		<ear1>Harvest earring</ear1>
+		<legs>Mahatma slops</legs>
 		<back>Rainbow cape</back>
-		<waist>Oracle's belt</waist>
+		<waist>Penitent's rope</waist>
 		<feet>Errant pigaches</feet>
 		<ammo>Bibiki seashell</ammo>
         </set>
@@ -196,7 +210,6 @@
 		<set name="mnd">
 			<head>Magus Keffiyeh +1</head>
 			<body>Magus Jubbah +1</body>
-			<legs>Mahatma Slops</legs> ~$300k
 			<feet>Mahatma Pigaches</feet> ~$270k
 			<neck>Promise Badge</neck>
 			<ear1></ear1>
@@ -221,17 +234,17 @@
             <back>Jester's Cape +1</back>
         </set>  -->
 
-        <set name="chr">
-		<head></head>
+        <set name="chr" baseset="str">
+		<head>Mirage keffiyeh</head>
 		<neck></neck>
 		<ear1></ear1>
 		<ear2></ear2>
-		<body></body>
+		<body>Magus jubbah</body>
 		<hands></hands>
 		<ring1></ring1>
 		<ring2></ring2>
 		<back>Rainbow cape</back>
-		<waist></waist>
+		<waist>Al Zahbi sash</waist>
 		<legs>Errant slops</legs>
 		<feet></feet>
         </set>
@@ -296,27 +309,30 @@
         </set>
         <set name="thunderstaff" baseset="base">
             <main>Thunder Staff</main>
+		<sub>Thunder grip</sub>
         </set>
         <set name="lightstaff" baseset="base">
             <main>Apollo's staff</main>
+		<sub>Light grip</sub>
         </set>
         <set name="darkstaff" baseset="base">
-            <main>Dark Staff</main>
+            <main>Pluto's staff</main>
+		<sub>Dark grip</sub>
         </set>
 				
 	<set name="whm">
 		<main>Apollo's staff</main>
-		<head>Magus keffiyeh</head>
+		<head>Mirage keffiyeh</head>
 		<neck>Justice badge</neck>
-		<body>Magus Jubbah</body>
+		<body>Mirage Jubbah</body>
 		<hands>Mirage bazubands</hands>
             <ring1>Sapphire ring</ring1>
             <ring2>Sapphire ring</ring2>
-		<ear1>Morion earring</ear1>
-		<ear2>Morion earring</ear2>
-		<legs>Errant slops</legs>
+		<ear1>Geist earring</ear1>
+		<ear2>Harvest earring</ear2>
+		<legs>Mahatma slops</legs>
 		<back>Rainbow cape</back>
-		<waist>Oracle's belt</waist>
+		<waist>Penitent's rope</waist>
 		<feet>Errant pigaches</feet>
             <sub>Bugard strap +1</sub>
             <ammo>Morion Tathlum</ammo>
@@ -332,6 +348,7 @@
 	  <var name="Fsh">0</var>
 	  <var name="weaponset">onehand</var>
 	  <var name="whm">0</var>
+	  <var name="tps">0</var>
  
         <var name="BlueMagicStr">Sprout Smack|Wild Oats|Bludgeon|Screwdriver|Pinecone Bomb|Uppercut|Jet Stream|Death Scissors|
         Dimensional Death|Mandibular Bite|Vertical Cleave|Ram Charge|Hydro Shot|Spinal Cleave|Cannonball</var>
@@ -396,6 +413,16 @@
             <else>
                 <setvar name="whm" value="0" />
                 <addtochat color="36">WHM Idle Set Off!</addtochat>
+            </else>
+	  </cmd>
+	  <cmd input="/tp">
+            <if advanced="$tps=0">
+                <setvar name="tps" value="1" />
+                <addtochat color="36">TP Idle Set On!</addtochat>
+            </if>
+            <else>
+                <setvar name="tps" value="0" />
+                <addtochat color="36">TP Idle Set Off!</addtochat>
             </else>
 	  </cmd>
 
@@ -513,7 +540,7 @@
 
 <!-- Equip idle set when idle in all other scenarios-->
 		<elseif advanced="$whm=1">
-			<equip set="whm" />
+			<equip set="mnd" />
 		</elseif>
 
 		<else>
@@ -529,18 +556,46 @@
 		<equip set="lumber" />
         </if>
 -->
-        <if e_area="Port*|Lower Jeuno|Upper Jeuno|Ru'Lude|Whitegate|Nashmau|Bastok*|Metalworks|Windurst*|Heavens*|Kazham|Norg|Rabao|Southern San d'Oria|Northern San d'Oria|Port San d'Oria|Chateau*">
-     		<equip set="City" />
+        <if 
+e_area="Port*|*Whitegate|Nashmau|Metalworks|Windurst*|Heavens*|Kazham|Norg|Rabao|Chateau*|Mhaura|Selbina|Al Zahbi|Tavnazian Safehold">
+     		<equip set="Idle" />
         </if>
     </idlegear>
 
-<preranged>
+    <preranged>
     </preranged>
     <midranged>
     </midranged>
     <premagic>
     </premagic>
     <midmagic>
+<!--- This segment cancels Utsusemi: Ni if Ichi is cast while Ni shadows are still active --->
+<!--- This segment REQUIRES the Debuff addon to be installed and loaded in order to function -->
+   <!--- Cancel one shadow --->	
+	<if ad_name="Utsusemi: Ichi">
+  		<if buffactive="66">
+    			<command delay="3500">/cancel 66</command>
+  	</if>
+  <!--- Cancel two shadows --->
+  	<elseif buffactive="444">
+    		<command delay="3500">/cancel 444</command>
+  	</elseif>
+  <!--- Cancel three shadows (but why?) --->
+  	<else>
+    		<command delay="3500">/cancel 445</command>
+  	</else>
+	</if>
+
+<!--- This segment cancels Sneak or Monomi: Ichi if recast while buff active --->
+
+        <if ad_name="Monomi: Ichi|Sneak">
+
+            <if at_type="self">
+                <command delay="3500">/cancel 71</command>
+            </if>
+
+        </if>
+
 	<if ad_name="Cure*">
             <equip set="mnd" />
 		<equip set="lightstaff" />
@@ -598,7 +653,7 @@
                 </if>
             </elseif>
             <elseif ad_name="$BlueMagicBreath">
-                <equip set="int">
+                <equip set="macc">
                     <head>Mirage Keffiyeh</head>
                 </equip>
                 <equip set="%ad_elementstaff" />
@@ -614,8 +669,8 @@
             </elseif>
             <elseif ad_name="$BlueMagicBuff">
                 <equip set="haste">
-                	<head>Walahra Turban</head>
-            	</equip>
+                	<head>Mirage keffiyeh</head>
+                </equip>
             </elseif>
         </if>
         <elseif ad_skill="Ninjutsu">
